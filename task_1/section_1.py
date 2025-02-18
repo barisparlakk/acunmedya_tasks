@@ -23,4 +23,6 @@ elif islem_operatoru in operatorler:
         else:
             print(" Bolme isleminizin sonucu = ",sayi_1 / sayi_2)
     elif islem_operatoru == "%":
-        mod_al = input("")
+        print(" Mod alma isleminizin sonucu = ",sayi_1 % sayi_2)
+    elif islem_operatoru == "**":
+        print(" Us alma isleminizin sonucu = ",sayi_1 ** sayi_2)
