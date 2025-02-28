@@ -1,11 +1,11 @@
 ogrenciler = []
 
 def ogrenci_ekle():
-    ad = input(" Öğrenci adını girin: ")
-    soyad = input("Öğrenci soyadını girin: ")
+    ad = input(" Ogrenci adini girin: ")
+    soyad = input(" Ogrenci soyadini girin: ")
     idno = int(input(" Yalnizca rakamlardan olusan ogrenci numarasini girin: "))
-    yas = int(input("Öğrenci yaşını girin: "))
-    dersler = input("Öğrencinin aldığı dersleri aralarına virgül koyarak yazınız: ").split(",")
+    yas = int(input(" Ogrenci yasini girin: "))
+    dersler = input(" Ogrencinin aldigi dersleri aralarina virgul koyarak yaziniz: ").split(",")
 
     ogrenci = {
         "Ad": ad,
@@ -66,13 +66,28 @@ def ogrenci_listele():
             print(" ----------------------------- ")
 
 
-    def menu():
-        while True:
-            print(" --------  Ogrenci Yonetim Sistemi  --------")
-            print(" --------      1- Ogrenci Ekle      --------")
-            print(" --------      2- Ogrenci Sil       --------")
-            print(" --------      3- Ogrenci Guncelle  --------")
-            print(" --------      4- Ogrenci Listele   --------")
-            print(" --------      5-     Cikis         --------")
+def menu():
+    while True:
+        print(" --------  Ogrenci Yonetim Sistemi  --------")
+        print(" --------      1- Ogrenci Ekle      --------")
+        print(" --------      2- Ogrenci Sil       --------")
+        print(" --------      3- Ogrenci Guncelle  --------")
+        print(" --------      4- Ogrenci Listele   --------")
+        print(" --------      5-     Cikis         --------")
+        secim = int(input("---- Seciminiz: ---- "))
+        if secim == 1:
+            ogrenci_ekle()
+        elif secim == 2:
+            ogrenci_sil()
+        elif secim == 3:
+            ogrenci_guncelle()
+        elif secim == 4:
+            ogrenci_listele()
+        elif secim == 5:
+            print(" Programdan cikiliyor...")
+            break
+        else:
+            print(" Gecersiz secim. Tekrar girdi bekleniyor. ")
 
-
+if __name__ == "__main__":
+    menu()
